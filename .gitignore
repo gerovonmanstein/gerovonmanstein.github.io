@@ -1,0 +1,32 @@
+# Editor and IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+
+# Firebase (not using right now)
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+.firebase/
+
+# Node modules (if adding later)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build outputs (GitHub Pages builds from source)
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment files
+.env
+.env.local
