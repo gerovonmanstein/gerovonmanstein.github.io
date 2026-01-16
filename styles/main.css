@@ -1637,6 +1637,11 @@ section {
         width: 200px;
         height: 200px;
     }
+
+    /* Hide scroll indicator on mobile to prevent overlap */
+    .scroll-indicator {
+        display: none;
+    }
 }
 
 /* Small mobile (max-width: 480px) */
