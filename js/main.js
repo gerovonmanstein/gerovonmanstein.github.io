@@ -3,11 +3,33 @@
 (function () {
     'use strict';
 
-    // Theme Management
+    // Theme Management with System Preference Detection
     const themeToggle = document.getElementById('theme-toggle');
-    const currentTheme = localStorage.getItem('theme') || 'light';
+
+    // Function to get system theme preference
+    function getSystemTheme() {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            return 'dark';
+        }
+        return 'light';
+    }
+
+    // Get theme: prioritize localStorage (user choice), fallback to system preference
+    const savedTheme = localStorage.getItem('theme');
+    const currentTheme = savedTheme || getSystemTheme();
 
     document.documentElement.setAttribute('data-theme', currentTheme);
+
+    // Listen for system theme changes (when user changes their OS theme)
+    if (window.matchMedia) {
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+            // Only update if user hasn't manually set a preference
+            if (!localStorage.getItem('theme')) {
+                const newTheme = e.matches ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', newTheme);
+            }
+        });
+    }
 
     if (themeToggle) {
         themeToggle.addEventListener('click', () => {
