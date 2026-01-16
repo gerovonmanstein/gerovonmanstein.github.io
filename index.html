@@ -20,6 +20,26 @@
     <link rel="stylesheet" href="styles/council-network.css">
     <link rel="stylesheet" href="styles/coming-soon.css">
 
+    <!-- Inline theme detection - runs before page renders to prevent flash -->
+    <script>
+        (function () {
+            // Function to get system theme preference
+            function getSystemTheme() {
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    return 'dark';
+                }
+                return 'light';
+            }
+
+            // Get theme: prioritize localStorage (user choice), fallback to system preference
+            const savedTheme = localStorage.getItem('theme');
+            const theme = savedTheme || getSystemTheme();
+
+            // Apply theme immediately
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+
 </head>
 
 <body>
