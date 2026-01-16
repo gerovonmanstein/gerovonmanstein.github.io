@@ -14,30 +14,26 @@
         return 'light';
     }
 
-    // Get theme: prioritize localStorage (user choice), fallback to system preference
-    const savedTheme = localStorage.getItem('theme');
-    const currentTheme = savedTheme || getSystemTheme();
-
+    // Always use system preference (already set by inline script, but ensure consistency)
+    const currentTheme = getSystemTheme();
     document.documentElement.setAttribute('data-theme', currentTheme);
 
-    // Listen for system theme changes (when user changes their OS theme)
+    // Listen for system theme changes in real-time
     if (window.matchMedia) {
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-            // Only update if user hasn't manually set a preference
-            if (!localStorage.getItem('theme')) {
-                const newTheme = e.matches ? 'dark' : 'light';
-                document.documentElement.setAttribute('data-theme', newTheme);
-            }
+            const newTheme = e.matches ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', newTheme);
         });
     }
 
+    // Manual toggle button - temporarily overrides until page reload
     if (themeToggle) {
         themeToggle.addEventListener('click', () => {
             const theme = document.documentElement.getAttribute('data-theme');
             const newTheme = theme === 'light' ? 'dark' : 'light';
 
             document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
+            // Note: Not saving to localStorage anymore - will reset to system on reload
 
             themeToggle.style.transform = 'rotate(360deg)';
             setTimeout(() => {

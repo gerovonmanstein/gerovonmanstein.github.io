@@ -31,9 +31,8 @@
                 return 'light';
             }
 
-            // Get theme: prioritize localStorage (user choice), fallback to system preference
-            const savedTheme = localStorage.getItem('theme');
-            const theme = savedTheme || getSystemTheme();
+            // Always use system preference on page load
+            const theme = getSystemTheme();
 
             // Apply theme immediately
             document.documentElement.setAttribute('data-theme', theme);
