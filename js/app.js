@@ -75,9 +75,11 @@ function showLoading() {
 
 function showError(err) {
     console.error("Failed to load CV:", err);
+    const code = err.code || err.message || String(err);
     document.getElementById("cv-root").innerHTML =
         `<div class="cv-error">
-            <p>Could not load CV data. Please try refreshing.</p>
+            <p><strong>Could not load CV data.</strong></p>
+            <p style="font-family:monospace;font-size:.8rem;margin-top:.5rem;color:#666">${code}</p>
             <button onclick="location.reload()" class="btn-github" style="width:auto;margin-top:1rem">Reload</button>
          </div>`;
 }
