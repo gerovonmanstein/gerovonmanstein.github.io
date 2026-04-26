@@ -21,6 +21,8 @@ const cvData = {
     name:      "Gero von Manstein",
     linkedin:  "https://www.linkedin.com/in/gerovm/",
     instagram: "https://www.instagram.com/gerov.m/",
+    orcid:     "https://orcid.org/0009-0006-3234-4651",
+    email:     "skiff.onion5u@icloud.com",
 
     title: {
         en: "Information Engineering Student & Working Student at Daimler Truck",
