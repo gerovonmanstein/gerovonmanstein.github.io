@@ -212,13 +212,7 @@ function buildCV(user, cv) {
         ? `<img id="user-avatar" src="${esc(user.photoURL)}" alt="" class="topbar-avatar" style="display:block">`
         : "";
 
-    // ── Sidebar: Skills ───────────────────────────────────────────────────────
-    const skillGroupsHTML = (cv.skillGroups || []).map(g => `
-        <div class="skill-group">
-            <h3 class="skill-group-title">${esc(t(g.title))}</h3>
-            <div class="skill-tags">${(g.items || []).map(s => `<span class="tag">${esc(t(s))}</span>`).join("")}</div>
-        </div>`).join("");
-
+    // ── Sidebar: Languages ────────────────────────────────────────────────────
     const languagesHTML = (cv.languages || []).map(l => `
         <li>
             <span class="lang-name">${esc(t(l.name))}</span>
@@ -235,9 +229,6 @@ function buildCV(user, cv) {
             </div>
         </li>`).join("");
 
-    // ── Sidebar: Interests ────────────────────────────────────────────────────
-    const interestsHTML = (cv.interests || []).map(i => `<span class="tag">${esc(t(i))}</span>`).join("");
-
     // ── Main: sections ────────────────────────────────────────────────────────
     const educationHTML    = (cv.education    || []).map(renderTimelineItem).join("");
     const workHTML         = (cv.work         || []).map(renderTimelineItem).join("");
@@ -248,10 +239,8 @@ function buildCV(user, cv) {
 
     // ── Labels (bilingual) ────────────────────────────────────────────────────
     const L = {
-        skills:       lang === "de" ? "Kenntnisse"              : "Skills",
         languages:    lang === "de" ? "Sprachen"                : "Languages",
         awards:       lang === "de" ? "Auszeichnungen"          : "Awards & Certs",
-        interests:    lang === "de" ? "Interessen"              : "Interests",
         education:    lang === "de" ? "Ausbildung"              : "Education",
         work:         lang === "de" ? "Berufserfahrung"         : "Work Experience",
         emergency:    lang === "de" ? "Einsatzdienste"          : "Emergency Services",
@@ -259,6 +248,7 @@ function buildCV(user, cv) {
         projects:     lang === "de" ? "Projekte"                : "Projects",
         volunteering: lang === "de" ? "Ehrenamt & Engagement"   : "Volunteering",
         signout:      lang === "de" ? "Abmelden"                : "Sign out",
+        impressum:    lang === "de" ? "Impressum & Datenschutz" : "Legal Notice",
         location:     esc(t(cv.location)),
     };
 
@@ -313,23 +303,14 @@ function buildCV(user, cv) {
             <!-- Sidebar -->
             <aside class="cv-sidebar">
 
-                <section class="cv-block" data-section="skills">
-                    <h2 class="block-title">${L.skills}</h2>
-                    ${skillGroupsHTML}
-                    <div class="skill-group" style="margin-top:1rem">
-                        <h3 class="skill-group-title">${L.languages}</h3>
-                        <ul class="lang-list">${languagesHTML}</ul>
-                    </div>
+                <section class="cv-block" data-section="languages">
+                    <h2 class="block-title">${L.languages}</h2>
+                    <ul class="lang-list">${languagesHTML}</ul>
                 </section>
 
                 <section class="cv-block" data-section="awards">
                     <h2 class="block-title">${L.awards}</h2>
                     <ul class="award-list">${awardsHTML}</ul>
-                </section>
-
-                <section class="cv-block" data-section="interests">
-                    <h2 class="block-title">${L.interests}</h2>
-                    <div class="skill-tags">${interestsHTML}</div>
                 </section>
 
             </aside>
@@ -375,6 +356,8 @@ function buildCV(user, cv) {
     <footer class="cv-footer">
         <p>&copy; 2026 ${esc(t(cv.name))} &nbsp;&middot;&nbsp;
             <a href="${esc(cv.linkedin)}" target="_blank" rel="noopener">LinkedIn</a>
+            &nbsp;&middot;&nbsp;
+            <a href="impressum.html">${L.impressum}</a>
         </p>
     </footer>`;
 }

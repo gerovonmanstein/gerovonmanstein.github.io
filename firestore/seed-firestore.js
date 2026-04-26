@@ -35,36 +35,9 @@ const cvData = {
         de: "Studium der Informationstechnik an der TU München verbunden mit aktivem Einsatzdienst und studentischer Selbstverwaltung. Werkstudent bei Daimler Truck im Bereich KI-gestützte Unternehmenssoftware. Stipendiat der Konrad-Adenauer-Stiftung. Erster gewählter Vorsitzender der Studierendenvertretung am TUM Campus Heilbronn.",
     },
 
-    // ── Skills ────────────────────────────────────────────────────────────────
-    skillGroups: [
-        {
-            title: { en: "Programming & Tech", de: "Programmierung & Technik" },
-            items: ["Python", "REST APIs", "AI / ML", "System Integration", "SQL", "Git", "Linux"],
-        },
-        {
-            title: { en: "Emergency Services", de: "Einsatzdienste" },
-            items: [
-                { en: "First Responder",    de: "Ersthelfer" },
-                { en: "Paramedic",          de: "Sanitäter" },
-                { en: "Drone Operations",   de: "Drohnenoperator" },
-                { en: "Incident Command",   de: "Einsatzleitung" },
-            ],
-        },
-        {
-            title: { en: "Leadership", de: "Führung" },
-            items: [
-                { en: "Student Governance", de: "Hochschulpolitik" },
-                { en: "Event Management",   de: "Veranstaltungsmanagement" },
-                { en: "Public Speaking",    de: "Öffentliches Reden" },
-                { en: "Team Leadership",    de: "Teamführung" },
-            ],
-        },
-    ],
-
     languages: [
         { name: { en: "German",  de: "Deutsch"  }, level: { en: "Native",        de: "Muttersprache" } },
         { name: { en: "English", de: "Englisch" }, level: { en: "C1 – Cambridge", de: "C1 – Cambridge" } },
-        { name: { en: "French",  de: "Französisch" }, level: { en: "Basic",       de: "Grundkenntnisse" } },
     ],
 
     awards: [
@@ -84,15 +57,6 @@ const cvData = {
             title: { en: "Drone Pilot License A1/A3",    de: "Drohnenführerschein A1/A3" },
             org:   "LBA · 2023",
         },
-    ],
-
-    interests: [
-        { en: "Artificial Intelligence", de: "Künstliche Intelligenz" },
-        { en: "Drones & UAV",            de: "Drohnen & UAV" },
-        { en: "Emergency Medicine",      de: "Notfallmedizin" },
-        { en: "Politics",                de: "Politik" },
-        { en: "Entrepreneurship",        de: "Unternehmertum" },
-        { en: "Hiking",                  de: "Wandern" },
     ],
 
     // ── Education ─────────────────────────────────────────────────────────────
