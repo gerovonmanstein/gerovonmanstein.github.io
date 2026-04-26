@@ -86,6 +86,10 @@ function showError(err) {
 
 // ── Fetch CV from Firestore ───────────────────────────────────────────────────
 async function fetchCV() {
+    // Force token refresh to ensure auth state is fresh
+    const user = auth.currentUser;
+    if (user) await user.getIdToken(true);
+
     const snap = await getDoc(doc(db, "cv", "main"));
     if (!snap.exists()) throw new Error("CV document not found in Firestore.");
     return snap.data();
