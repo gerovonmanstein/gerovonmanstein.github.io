@@ -115,25 +115,11 @@ const cvData = {
         {
             color: "red",
             title: { en: "Firefighter",          de: "Feuerwehrmann" },
-            org:   "Freiwillige Feuerwehr Heilbronn",
+            org:   "Freiwillige Feuerwehr Heilbronn/Ebenhausen-Schäftlarn/Hohenschäftlarn",
             date:  { en: "Nov 2024 – Present",   de: "Nov. 2024 – heute" },
             desc:  {
                 en: "Active volunteer firefighter responding to fire, rescue, and hazmat incidents in the city of Heilbronn.",
                 de: "Aktiver Feuerwehrmann im Lösch- und Hilfeleistungseinsatz sowie bei Gefahrguteinsätzen in Heilbronn.",
-            },
-            tags: [],
-        },
-        {
-            color: "red",
-            title: {
-                en: "Drone Squadron Head · IT Administrator · Paramedic",
-                de: "Drohnenstaffelleiter · IT-Administrator · Sanitäter",
-            },
-            org:  "FF Ebenhausen-Schäftlarn",
-            date: { en: "2022 – Present", de: "2022 – heute" },
-            desc: {
-                en: "Leading the drone unit for aerial reconnaissance and search & rescue operations. Managing all IT infrastructure for the brigade. Providing first-responder paramedic care at incidents.",
-                de: "Leitung der Drohnenstaffel für Luftaufklärung und Sucheinsätze. Verwaltung der gesamten IT-Infrastruktur der Wehr. Sanitätsdienst als Ersthelfer bei Einsätzen.",
             },
             tags: [],
         },
