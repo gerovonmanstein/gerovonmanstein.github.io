@@ -246,7 +246,7 @@ function buildCV(user, cv) {
         emergency:    lang === "de" ? "Einsatzdienste"            : "Emergency Services",
         leadership:   lang === "de" ? "Führung & Hochschule"      : "Leadership & University",
         projects:     lang === "de" ? "Projekte"                  : "Projects",
-        volunteering: lang === "de" ? "Ehrenamt & Gesellschaft"   : "Volunteering & Social",
+        volunteering: lang === "de" ? "Ehrenamt & Engagement"   : "Volunteering",
         signout:      lang === "de" ? "Abmelden"                  : "Sign out",
         impressum:    lang === "de" ? "Impressum & Datenschutz"   : "Legal Notice",
         location:     esc(t(cv.location)),
