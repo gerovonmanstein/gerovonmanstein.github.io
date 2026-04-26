@@ -32,14 +32,11 @@ const cvData = {
         en: "Heilbronn & Munich, Germany",
         de: "Heilbronn & München, Deutschland",
     },
-    summary: {
-        en: "Combining Information Engineering at TU Munich with hands-on emergency services and student leadership. Working student at Daimler Truck building AI-powered enterprise tools. Konrad-Adenauer Scholar. First elected Head of TUM Campus Heilbronn Student Council.",
-        de: "Studium der Informationstechnik an der TU München verbunden mit aktivem Einsatzdienst und studentischer Selbstverwaltung. Werkstudent bei Daimler Truck im Bereich KI-gestützte Unternehmenssoftware. Stipendiat der Konrad-Adenauer-Stiftung. Erster gewählter Vorsitzender der Studierendenvertretung am TUM Campus Heilbronn.",
-    },
+    summary: { en: "", de: "" },
 
     languages: [
         { name: { en: "German",  de: "Deutsch"  }, level: { en: "Native",        de: "Muttersprache" } },
-        { name: { en: "English", de: "Englisch" }, level: { en: "C1 – Cambridge", de: "C1 – Cambridge" } },
+        { name: { en: "English", de: "Englisch" }, level: { en: "Bilingual", de: "Bilingual" } },
     ],
 
     awards: [
@@ -64,20 +61,14 @@ const cvData = {
                 en: "Interdisciplinary programme combining computer science, electrical engineering, and management. Focus on AI, data systems, and enterprise software. Konrad-Adenauer Scholar since April 2025.",
                 de: "Interdisziplinäres Studium aus Informatik, Elektrotechnik und Betriebswirtschaft. Schwerpunkte: KI, Datensysteme und Unternehmenssoftware. Stipendiat der Konrad-Adenauer-Stiftung seit April 2025.",
             },
-            tags: [
-                { label: "TUM",       color: "blue" },
-                { label: "Heilbronn", color: "blue" },
-            ],
+            tags: [],
         },
         {
             color: "default",
             title: "Abitur",
-            org:   "Gymnasium Starnberg",
+            org:   "Rainer-Maria-Rilke-Gymnasium Icking",
             date:  "2023",
-            desc:  {
-                en: "Focus subjects: Mathematics, Physics, Computer Science.",
-                de: "Leistungskurse: Mathematik, Physik, Informatik.",
-            },
+            desc:  { en: "", de: "" },
             tags: [],
         },
     ],
@@ -96,12 +87,7 @@ const cvData = {
                 en: "Building AI-powered enterprise tools and integrating internal systems. Connecting LinkedIn Learning, Oracle, and Udemy APIs into a unified learning platform. Developing and deploying an internal AI chatbot for knowledge management.",
                 de: "Entwicklung KI-gestützter Unternehmenstools und Integration interner Systeme. Anbindung von LinkedIn Learning, Oracle und Udemy APIs in eine einheitliche Lernplattform. Entwicklung und Deployment eines internen KI-Chatbots für Wissensmanagement.",
             },
-            tags: [
-                { label: "Python",                                          color: "blue" },
-                { label: "REST APIs",                                       color: "blue" },
-                { label: "AI / ML",                                         color: "blue" },
-                { label: { en: "System Integration", de: "Systemintegration" }, color: "blue" },
-            ],
+            tags: [],
         },
     ],
 
@@ -121,14 +107,10 @@ const cvData = {
             org:  { en: "TUM Campus Heilbronn · Student Council", de: "TUM Campus Heilbronn · Studierendenvertretung" },
             date: { en: "Dec 2024 – Present",                     de: "Dez. 2024 – heute" },
             desc: {
-                en: "First democratically elected head of TUM Campus Heilbronn's student council, representing 1,000+ students across 6 departments. Established formal co-determination rights in university committees. Organises semester events, freshman orientations, and campus activities.",
-                de: "Erster demokratisch gewählter Vorsitzender der Studierendenvertretung am TUM Campus Heilbronn. Vertretung von über 1.000 Studierenden in 6 Fachbereichen. Etablierung formeller Mitbestimmungsrechte in Hochschulgremien. Organisation von Semesterfeiern, Erstsemesterveranstaltungen und Campus-Events.",
+                en: "First democratically elected head of TUM Campus Heilbronn's student council, representing 1,000+ students across 6 departments. Organises semester events, freshman orientations, and campus activities.",
+                de: "Erster demokratisch gewählter Vorsitzender der Studierendenvertretung am TUM Campus Heilbronn. Vertretung von über 1.000 Studierenden in 6 Fachbereichen. Organisation von Semesterfeiern, Erstsemesterveranstaltungen und Campus-Events.",
             },
-            tags: [
-                { label: { en: "Leadership",     de: "Führung" },          color: "purple" },
-                { label: { en: "Governance",     de: "Hochschulpolitik" }, color: "purple" },
-                { label: { en: "1,000+ Students",de: "1.000+ Studierende" }, color: "purple" },
-            ],
+            tags: [],
         },
         {
             color: "red",
@@ -139,10 +121,7 @@ const cvData = {
                 en: "Active volunteer firefighter responding to fire, rescue, and hazmat incidents in the city of Heilbronn.",
                 de: "Aktiver Feuerwehrmann im Lösch- und Hilfeleistungseinsatz sowie bei Gefahrguteinsätzen in Heilbronn.",
             },
-            tags: [
-                { label: { en: "Firefighting", de: "Brandbekämpfung" }, color: "red" },
-                { label: { en: "Rescue",       de: "Technische Hilfe" }, color: "red" },
-            ],
+            tags: [],
         },
         {
             color: "red",
@@ -156,11 +135,7 @@ const cvData = {
                 en: "Leading the drone unit for aerial reconnaissance and search & rescue operations. Managing all IT infrastructure for the brigade. Providing first-responder paramedic care at incidents.",
                 de: "Leitung der Drohnenstaffel für Luftaufklärung und Sucheinsätze. Verwaltung der gesamten IT-Infrastruktur der Wehr. Sanitätsdienst als Ersthelfer bei Einsätzen.",
             },
-            tags: [
-                { label: { en: "Drone Ops", de: "Drohnenbetrieb" },    color: "red" },
-                { label: { en: "IT Admin",  de: "IT-Administration" },  color: "red" },
-                { label: { en: "Paramedic", de: "Sanitäter" },          color: "red" },
-            ],
+            tags: [],
         },
         {
             color: "red",
@@ -171,10 +146,7 @@ const cvData = {
                 en: "Providing medical support at public events and emergency standby operations across Baden-Württemberg.",
                 de: "Sanitätsdienst bei Veranstaltungen und Bereitschaftseinsätzen in ganz Baden-Württemberg.",
             },
-            tags: [
-                { label: { en: "First Aid",     de: "Erste Hilfe" },    color: "red" },
-                { label: { en: "Event Medical", de: "Sanitätsdienst" }, color: "red" },
-            ],
+            tags: [],
         },
     ],
 };

@@ -301,7 +301,7 @@ function buildCV(user, cv) {
                         Email
                     </a>` : ""}
                 </div>
-                <p class="hero-summary">${esc(t(cv.summary))}</p>
+                ${t(cv.summary) ? `<p class="hero-summary">${esc(t(cv.summary))}</p>` : ""}
             </div>
         </section>
 
