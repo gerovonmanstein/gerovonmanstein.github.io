@@ -30,3 +30,11 @@ npm-debug.log*
 # Environment files
 .env
 .env.local
+
+# Firebase service account key – NEVER commit this
+serviceAccountKey.json
+firestore/serviceAccountKey.json
+
+# Firestore seed script dependencies – local only
+firestore/node_modules/
+firestore/package-lock.json
