@@ -54,7 +54,7 @@ const cvData = {
     education: [
         {
             color: "blue",
-            title: { en: "B.Sc. Information Engineering",       de: "B.Sc. Informationstechnik" },
+            title: "B.Sc. Information Engineering",
             org:   { en: "Technical University of Munich · Campus Heilbronn", de: "Technische Universität München · Campus Heilbronn" },
             date:  { en: "Oct 2023 – Present",                  de: "Okt. 2023 – heute" },
             desc:  {
@@ -139,12 +139,12 @@ const cvData = {
         },
         {
             color: "red",
-            title: { en: "Paramedic & First Responder",  de: "Sanitäter & Ersthelfer" },
-            org:   "Sanitätsteam BW",
-            date:  { en: "2022 – Present",               de: "2022 – heute" },
+            title: { en: "Paramedic (Rettungssanitäter) & First Responder", de: "Rettungssanitäter & Ersthelfer" },
+            org:   "Sanitätsteam BW · ASB (FAMS)",
+            date:  { en: "2022 – Present", de: "2022 – heute" },
             desc:  {
-                en: "Providing medical support at public events and emergency standby operations across Baden-Württemberg.",
-                de: "Sanitätsdienst bei Veranstaltungen und Bereitschaftseinsätzen in ganz Baden-Württemberg.",
+                en: "Qualified Rettungssanitäter (paramedic) after completing training at ASB / FAMS (2025–2026). Providing medical support at public events and emergency standby operations across Baden-Württemberg.",
+                de: "Abgeschlossene Ausbildung zum Rettungssanitäter beim ASB an der FAMS (2025–2026). Sanitätsdienst bei Veranstaltungen und Bereitschaftseinsätzen in ganz Baden-Württemberg.",
             },
             tags: [],
         },
