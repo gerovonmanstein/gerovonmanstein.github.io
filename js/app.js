@@ -239,16 +239,16 @@ function buildCV(user, cv) {
 
     // ── Labels (bilingual) ────────────────────────────────────────────────────
     const L = {
-        languages:    lang === "de" ? "Sprachen"                : "Languages",
-        awards:       lang === "de" ? "Auszeichnungen"          : "Awards & Certs",
-        education:    lang === "de" ? "Ausbildung"              : "Education",
-        work:         lang === "de" ? "Berufserfahrung"         : "Work Experience",
-        emergency:    lang === "de" ? "Einsatzdienste"          : "Emergency Services",
-        leadership:   lang === "de" ? "Führung & Hochschule"    : "Leadership & University",
-        projects:     lang === "de" ? "Projekte"                : "Projects",
-        volunteering: lang === "de" ? "Ehrenamt & Engagement"   : "Volunteering",
-        signout:      lang === "de" ? "Abmelden"                : "Sign out",
-        impressum:    lang === "de" ? "Impressum & Datenschutz" : "Legal Notice",
+        languages:    lang === "de" ? "Sprachen"                  : "Languages",
+        awards:       lang === "de" ? "Auszeichnungen"            : "Awards & Certs",
+        education:    lang === "de" ? "Ausbildung"                : "Education",
+        work:         lang === "de" ? "Berufserfahrung"           : "Work Experience",
+        emergency:    lang === "de" ? "Einsatzdienste"            : "Emergency Services",
+        leadership:   lang === "de" ? "Führung & Hochschule"      : "Leadership & University",
+        projects:     lang === "de" ? "Projekte"                  : "Projects",
+        volunteering: lang === "de" ? "Ehrenamt & Gesellschaft"   : "Volunteering & Social",
+        signout:      lang === "de" ? "Abmelden"                  : "Sign out",
+        impressum:    lang === "de" ? "Impressum & Datenschutz"   : "Legal Notice",
         location:     esc(t(cv.location)),
     };
 
