@@ -235,7 +235,7 @@ function buildCV(user, cv) {
     const emergencyHTML    = (cv.emergency    || []).map(renderTimelineItem).join("");
     const leadershipHTML   = (cv.leadership   || []).map(renderTimelineItem).join("");
     const projectsHTML     = (cv.projects     || []).map(renderExtraCard).join("");
-    const volunteeringHTML = (cv.volunteering || []).map(renderExtraCard).join("");
+    const volunteeringHTML = (cv.volunteering || []).map(renderTimelineItem).join("");
 
     // ── Labels (bilingual) ────────────────────────────────────────────────────
     const L = {
@@ -326,35 +326,12 @@ function buildCV(user, cv) {
             <!-- Main -->
             <div class="cv-main">
 
-                <section class="cv-block" data-section="education">
-                    <h2 class="block-title">${L.education}</h2>
-                    <div class="timeline">${educationHTML}</div>
-                </section>
-
-                <section class="cv-block" data-section="work">
-                    <h2 class="block-title">${L.work}</h2>
-                    <div class="timeline">${workHTML}</div>
-                </section>
-
-                <section class="cv-block" data-section="emergency">
-                    <h2 class="block-title">${L.emergency}</h2>
-                    <div class="timeline">${emergencyHTML}</div>
-                </section>
-
-                <section class="cv-block" data-section="leadership">
-                    <h2 class="block-title">${L.leadership}</h2>
-                    <div class="timeline">${leadershipHTML}</div>
-                </section>
-
-                <section class="cv-block" data-section="projects">
-                    <h2 class="block-title">${L.projects}</h2>
-                    <div class="extra-grid">${projectsHTML}</div>
-                </section>
-
-                <section class="cv-block" data-section="volunteering">
-                    <h2 class="block-title">${L.volunteering}</h2>
-                    <div class="extra-grid">${volunteeringHTML}</div>
-                </section>
+                ${educationHTML    ? `<section class="cv-block" data-section="education"><h2 class="block-title">${L.education}</h2><div class="timeline">${educationHTML}</div></section>` : ""}
+                ${workHTML         ? `<section class="cv-block" data-section="work"><h2 class="block-title">${L.work}</h2><div class="timeline">${workHTML}</div></section>` : ""}
+                ${emergencyHTML    ? `<section class="cv-block" data-section="emergency"><h2 class="block-title">${L.emergency}</h2><div class="timeline">${emergencyHTML}</div></section>` : ""}
+                ${leadershipHTML   ? `<section class="cv-block" data-section="leadership"><h2 class="block-title">${L.leadership}</h2><div class="timeline">${leadershipHTML}</div></section>` : ""}
+                ${projectsHTML     ? `<section class="cv-block" data-section="projects"><h2 class="block-title">${L.projects}</h2><div class="extra-grid">${projectsHTML}</div></section>` : ""}
+                ${volunteeringHTML ? `<section class="cv-block" data-section="volunteering"><h2 class="block-title">${L.volunteering}</h2><div class="timeline">${volunteeringHTML}</div></section>` : ""}
 
             </div>
         </div>
