@@ -141,16 +141,14 @@ body {
 .gate-note { font-size: .875rem; color: var(--text-2); margin-bottom: 1.5rem; }
 .gate-privacy { font-size: .75rem; color: var(--text-3); line-height: 1.5; margin-top: .875rem; }
 
-/* GitHub button */
-.btn-github {
+/* Auth buttons */
+.btn-github, .btn-framagit, .btn-opencode {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: .625rem;
     width: 100%;
     padding: .6875rem 1.25rem;
-    background: var(--text);
-    color: var(--bg);
     border: none;
     border-radius: var(--radius);
     font-size: .9375rem;
@@ -159,9 +157,25 @@ body {
     cursor: pointer;
     transition: opacity var(--t), transform var(--t);
 }
-.btn-github:hover  { opacity: .85; transform: translateY(-1px); }
-.btn-github:active { transform: translateY(0); }
-.btn-github:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+
+.btn-github {
+    background: var(--text);
+    color: var(--bg);
+}
+
+.btn-framagit {
+    background: #84329b;
+    color: #ffffff;
+}
+
+.btn-opencode {
+    background: #003B5C;
+    color: #ffffff;
+}
+
+.btn-github:hover, .btn-framagit:hover, .btn-opencode:hover { opacity: .85; transform: translateY(-1px); }
+.btn-github:active, .btn-framagit:active, .btn-opencode:active { transform: translateY(0); }
+.btn-github:disabled, .btn-framagit:disabled, .btn-opencode:disabled { opacity: .5; cursor: not-allowed; transform: none; }
 
 /* ── Top Bar ──────────────────────────────────────────────── */
 .topbar {

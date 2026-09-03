@@ -4,7 +4,7 @@
 
 import { initializeApp }
     from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import { getAuth, GithubAuthProvider, signInWithPopup, signOut, onAuthStateChanged }
+import { getAuth, GithubAuthProvider, OAuthProvider, signInWithPopup, signOut, onAuthStateChanged }
     from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 import { getFirestore, doc, getDoc }
     from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
@@ -25,6 +25,8 @@ const app      = initializeApp(firebaseConfig);
 const auth     = getAuth(app);
 const db       = getFirestore(app);
 const provider = new GithubAuthProvider();
+const framagitProvider = new OAuthProvider('oidc.framagit');
+const opencodeProvider = new OAuthProvider('oidc.opencode');
 let   analytics;
 try { analytics = getAnalytics(app); } catch (_) {}
 
@@ -135,15 +137,40 @@ function wireControls() {
     updateThemeBtn();
 }
 
-// ── Sign-in button ────────────────────────────────────────────────────────────
+// ── Sign-in buttons ───────────────────────────────────────────────────────────
 document.getElementById("github-signin").addEventListener("click", async () => {
     const btn = document.getElementById("github-signin");
+    const originalHTML = btn.innerHTML;
     btn.disabled = true; btn.textContent = "Connecting…";
     try {
         await signInWithPopup(auth, provider);
     } catch (err) {
         console.error("Auth error:", err.code, err.message);
-        btn.disabled = false; btn.textContent = "Sign in with GitHub";
+        btn.disabled = false; btn.innerHTML = originalHTML;
+    }
+});
+
+document.getElementById("framagit-signin").addEventListener("click", async () => {
+    const btn = document.getElementById("framagit-signin");
+    const originalHTML = btn.innerHTML;
+    btn.disabled = true; btn.textContent = "Connecting…";
+    try {
+        await signInWithPopup(auth, framagitProvider);
+    } catch (err) {
+        console.error("Auth error:", err.code, err.message);
+        btn.disabled = false; btn.innerHTML = originalHTML;
+    }
+});
+
+document.getElementById("opencode-signin").addEventListener("click", async () => {
+    const btn = document.getElementById("opencode-signin");
+    const originalHTML = btn.innerHTML;
+    btn.disabled = true; btn.textContent = "Connecting…";
+    try {
+        await signInWithPopup(auth, opencodeProvider);
+    } catch (err) {
+        console.error("Auth error:", err.code, err.message);
+        btn.disabled = false; btn.innerHTML = originalHTML;
     }
 });
 
