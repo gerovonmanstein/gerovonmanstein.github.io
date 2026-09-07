@@ -38,3 +38,4 @@ firestore/serviceAccountKey.json
 # Firestore seed script dependencies – local only
 firestore/node_modules/
 firestore/package-lock.json
+firestore/seed-firestore.js
